@@ -10,6 +10,32 @@ https://creativecommons.org/licenses/by/3.0/"
 
 Chapter 1 - The feeling
 
+[TODO:
+I don't yet utilize this table.
+It will allow a game to set initial perceptions, provides real-valued mood/perception,
+thus allowing fractional mood/perception changes.  The integral numbers now used
+are rather course and don't allow much variation for incremental perception change.]
+
+[NB: Z machine will severly limit max number of people.
+When a game exceeds glulx will be required for its larger memory capabilities]
+
+[Will handle table up to 256 people]
+[Increase as needed for more people]
+Use MAX_STATIC_DATA of 2097152.
+Use ALLOC_CHUNK_SIZE of 65536.
+
+[Max of 128 people]
+[If more change to C*C where C is total characters in game]
+[the reflexive entries (eg: Spiderman,Spiderman,...) can be considered the character's own mood]
+Table of Character Perceptions
+Who (a person)	Whom (a person)	Attain (real number)	Enmity (real number)	Desire (real number)	Novel (real number)
+with 16384 blank rows
+
+[NB: The above maximum number of people is the worst case where every person
+in the game may have a perception of another. If this won't happen in practice in
+a game (stationary NPCs that will never encounter other NPCs for instance) then
+this number may be lowered.]
+
 a feeling is a kind of thing.
 a feeling is usually privately-named.
 a feeling is usually not portable.
